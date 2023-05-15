@@ -57,3 +57,36 @@ public class LatihanIndexNilai {
         // Menghitung nilai akhir mahasiswa dengan memanggil method getNilaiAkhir
         double na = oMhs.getNilaiAkhir();
 
+ // Menampilkan nama, nim, nilai quiz, nilai UTS, dan nilai UAS mahasiswa
+ System.out.println("Nama ke  = " + oMhs.getNama());
+ System.out.println("Nim ke  = " + oMhs.getNim());
+ System.out.println("Quiz : " + oMhs.getQuiz());
+ System.out.println("Uts : " + oMhs.getUts());
+ System.out.println("Uas : " + oMhs.getUas());
+ System.out.println("\n");
+ // Menampilkan nilai akhir mahasiswa
+ System.out.println("Nilai Akhir = " + na);
+ System.out.println("\n");
+ // Membuat objek MahasiswaLulus dan menentukan indeks dan keterangan lulus/tidak
+ // lulus dengan memanggil method getIndexNilai
+ MahasiswaLulus oMhsLulus = new MahasiswaLulus(nama, nim, quiz, uts, uas);
+ oMhsLulus.getIndexNilai(na);
+
+ System.out.println("\n");
+
+ MahasiswaLulusLagi oMhsLulusLagi = new MahasiswaLulusLagi(nama, nim, quiz, uts, uas);
+ double naLulusLagi = oMhsLulusLagi.getNilaiAkhir();
+
+ System.out.println("Nama ke  = " + oMhsLulusLagi.getNama());
+ System.out.println("Nim ke  = " + oMhsLulusLagi.getNim());
+ System.out.println("Quiz : " + oMhsLulusLagi.getQuiz());
+ System.out.println("Uts : " + oMhsLulusLagi.getUts());
+ System.out.println("Uas : " + oMhsLulusLagi.getUas());
+ System.out.println("\n");
+ System.out.println("Nilai Akhir = " + naLulusLagi);
+ System.out.println("\n");
+ oMhsLulusLagi.getIndexNilai(naLulusLagi);
+
+ input.close();
+}
+}

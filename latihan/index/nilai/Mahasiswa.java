@@ -58,3 +58,34 @@ class Mahasiswa {
 
 // Deklarasi kelas MahasiswaLulus yang merupakan turunan dari kelas Mahasiswa
 class MahasiswaLulus extends Mahasiswa {
+    // Deklarasi constructor untuk kelas MahasiswaLulus yang memanggil constructor
+    // superclass
+    MahasiswaLulus(String nama, String nim, double quiz, double uts, double uas) {
+        super(nama, nim, quiz, uts, uas);
+    }
+
+    // Implementasi method dari interface HasilAkhir untuk menghitung index nilai
+    // dan keterangan
+    public void getIndexNilai(double na) {
+        // Menentukan index dan keterangan berdasarkan nilai akhir (na)
+        if (na <= 45) {
+            index = 'E';
+            keterangan = "Sangat Kurang";
+        } else if (na <= 56) {
+            index = 'D';
+            keterangan = "Kurang";
+        } else if (na <= 68) {
+            index = 'C';
+            keterangan = "Cukup";
+        } else if (na <= 80) {
+            index = 'B';
+            keterangan = "Baik";
+        } else if (na <= 100) {
+            index = 'A';
+            keterangan = "Sangat Baik";
+        }
+        // Menampilkan index dan keterangan
+        System.out.println("Index = " + index);
+        System.out.println("Keterangan = " + keterangan);
+    }
+}
