@@ -28,3 +28,33 @@ class Mahasiswa {
     public double getQuiz() {
         return quiz;
     }
+    
+    // Method getter untuk atribut uts
+    public double getUts() {
+        return uts;
+    }
+
+    // Method getter untuk atribut uas
+    public double getUas() {
+        return uas;
+    }
+
+    // Method getter untuk atribut nama
+    public String getNama() {
+        return nama;
+    }
+
+    // Method getter untuk atribut nim
+    public String getNim() {
+        return nim;
+    }
+
+    // Method untuk menghitung nilai akhir (na)
+    public double getNilaiAkhir() {
+        na = (0.2 * quiz) + (0.3 * uts) + (0.5 * uas);
+        return na;
+    }
+}
+
+// Deklarasi kelas MahasiswaLulus yang merupakan turunan dari kelas Mahasiswa
+class MahasiswaLulus extends Mahasiswa {

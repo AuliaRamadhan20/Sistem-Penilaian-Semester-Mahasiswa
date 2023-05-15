@@ -28,3 +28,32 @@ class MahasiswaLulusLagi extends Mahasiswa {
         }
     }
 }
+
+public class LatihanIndexNilai {
+
+    public static void main(String[] args) {
+        // Membuat objek Scanner untuk membaca input dari pengguna
+        Scanner input = new Scanner(System.in);
+
+        // Membaca input untuk nama, nim, nilai quiz, nilai UTS, dan nilai UAS dari
+        // pengguna
+        System.out.print("Masukkan Nama: ");
+        String nama = input.nextLine();
+
+        System.out.print("Masukkan Nim: ");
+        String nim = input.nextLine();
+
+        System.out.print("Masukkan Nilai Quiz: ");
+        double quiz = input.nextDouble();
+
+        System.out.print("Masukkan Nilai UTS: ");
+        double uts = input.nextDouble();
+
+        System.out.print("Masukkan Nilai UAS: ");
+        double uas = input.nextDouble();
+
+        // Membuat objek Mahasiswa dengan menggunakan input dari pengguna
+        Mahasiswa oMhs = new Mahasiswa(nama, nim, quiz, uts, uas);
+        // Menghitung nilai akhir mahasiswa dengan memanggil method getNilaiAkhir
+        double na = oMhs.getNilaiAkhir();
+
